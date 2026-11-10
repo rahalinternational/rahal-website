@@ -24,6 +24,7 @@
       <a href="./Home.dc.html" style="text-decoration:none;font-size:15px;color:{{ homeColor }};font-weight:{{ homeWeight }};">Home</a>
       <a href="./About.dc.html" style="text-decoration:none;font-size:15px;color:{{ aboutColor }};font-weight:{{ aboutWeight }};">About</a>
       <a href="./Products.dc.html" style="text-decoration:none;font-size:15px;color:{{ productsColor }};font-weight:{{ productsWeight }};">Products</a>
+      <a href="./News.dc.html" style="text-decoration:none;font-size:15px;color:{{ newsColor }};font-weight:{{ newsWeight }};">News</a>
       <a href="./Contact.dc.html" style="text-decoration:none;font-size:15px;color:{{ contactColor }};font-weight:{{ contactWeight }};">Contact</a>
     </nav>
     <div style="display:none;align-items:center;gap:16px;" class="rahal-nav-desktop">
@@ -40,6 +41,7 @@
       <a onClick="{{ close }}" href="./Home.dc.html" style="text-decoration:none;font-size:16px;color:{{ homeColor }};font-weight:{{ homeWeight }};">Home</a>
       <a onClick="{{ close }}" href="./About.dc.html" style="text-decoration:none;font-size:16px;color:{{ aboutColor }};font-weight:{{ aboutWeight }};">About</a>
       <a onClick="{{ close }}" href="./Products.dc.html" style="text-decoration:none;font-size:16px;color:{{ productsColor }};font-weight:{{ productsWeight }};">Products</a>
+      <a onClick="{{ close }}" href="./News.dc.html" style="text-decoration:none;font-size:16px;color:{{ newsColor }};font-weight:{{ newsWeight }};">News</a>
       <a onClick="{{ close }}" href="./Contact.dc.html" style="text-decoration:none;font-size:16px;color:{{ contactColor }};font-weight:{{ contactWeight }};">Contact</a>
       <a onClick="{{ close }}" href="mailto:sales@rahalintl.com" style="text-decoration:none;background:#1e4d2e;color:#ffffff;padding:12px 22px;border-radius:4px;font-size:15px;font-weight:600;text-align:center;">Contact Sales</a>
     </div>
@@ -67,10 +69,12 @@ class Component extends DCLogic {
       homeColor: current === 'home' ? active : inactive,
       aboutColor: current === 'about' ? active : inactive,
       productsColor: current === 'products' ? active : inactive,
+      newsColor: current === 'news' ? active : inactive,
       contactColor: current === 'contact' ? active : inactive,
       homeWeight: current === 'home' ? 700 : 500,
       aboutWeight: current === 'about' ? 700 : 500,
       productsWeight: current === 'products' ? 700 : 500,
+      newsWeight: current === 'news' ? 700 : 500,
       contactWeight: current === 'contact' ? 700 : 500,
     };
   }
