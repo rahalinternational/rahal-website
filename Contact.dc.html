@@ -63,11 +63,15 @@
       </div>
     </div>
 
-    <form action="mailto:sales@rahalintl.com" method="post" enctype="text/plain" class="rahal-form" style="background:#f5f7f2;border:1px solid #e3e7dd;border-radius:12px;padding:40px;display:flex;flex-direction:column;gap:18px;">
+    <form onSubmit="{{ onSubmit }}" class="rahal-form" style="background:#f5f7f2;border:1px solid #e3e7dd;border-radius:12px;padding:40px;display:flex;flex-direction:column;gap:18px;">
+      <input type="hidden" name="access_key" value="202059b3-b0ed-4677-bc1f-064644345664" />
+      <input type="hidden" name="subject" value="New website inquiry — Rahal International" />
+      <input type="hidden" name="from_name" value="Rahal International website" />
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
       <div class="rahal-form-2" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;flex-wrap:wrap;">
         <div style="display:flex;flex-direction:column;gap:6px;">
           <label style="font-size:13px;font-weight:600;color:#16321f;">Name</label>
-          <input type="text" name="name" style="padding:12px 14px;border:1px solid #cfd8c8;border-radius:6px;font-size:15px;background:#ffffff;" />
+          <input type="text" name="name" required="{{ true }}" style="padding:12px 14px;border:1px solid #cfd8c8;border-radius:6px;font-size:15px;background:#ffffff;" />
         </div>
         <div style="display:flex;flex-direction:column;gap:6px;">
           <label style="font-size:13px;font-weight:600;color:#16321f;">Company</label>
@@ -76,13 +80,19 @@
       </div>
       <div style="display:flex;flex-direction:column;gap:6px;">
         <label style="font-size:13px;font-weight:600;color:#16321f;">Email</label>
-        <input type="email" name="email" style="padding:12px 14px;border:1px solid #cfd8c8;border-radius:6px;font-size:15px;background:#ffffff;" />
+        <input type="email" name="email" required="{{ true }}" style="padding:12px 14px;border:1px solid #cfd8c8;border-radius:6px;font-size:15px;background:#ffffff;" />
       </div>
       <div style="display:flex;flex-direction:column;gap:6px;">
         <label style="font-size:13px;font-weight:600;color:#16321f;">What are you looking to source?</label>
         <textarea name="message" rows="5" style="padding:12px 14px;border:1px solid #cfd8c8;border-radius:6px;font-size:15px;resize:vertical;background:#ffffff;"></textarea>
       </div>
-      <button type="submit" style="background:#1e4d2e;color:#ffffff;border:none;padding:15px 24px;border-radius:6px;font-size:15px;font-weight:700;cursor:pointer;" style-hover="background:#163a22;">Send Inquiry</button>
+      <button type="submit" disabled="{{ sending }}" style="background:#1e4d2e;color:#ffffff;border:none;padding:15px 24px;border-radius:6px;font-size:15px;font-weight:700;cursor:pointer;" style-hover="background:#163a22;">{{ buttonLabel }}</button>
+      <sc-if value="{{ isSent }}" hint-placeholder-val="{{ false }}">
+        <div role="status" style="font-size:15px;font-weight:600;color:#1e4d2e;">Thanks, we'll be in touch shortly.</div>
+      </sc-if>
+      <sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}">
+        <div role="alert" style="font-size:15px;color:#22281f;">Something went wrong. Please email us at <a href="mailto:sales@rahalintl.com" style="color:#1e4d2e;font-weight:600;">sales@rahalintl.com</a>.</div>
+      </sc-if>
     </form>
   </div>
 
@@ -90,5 +100,32 @@
 </div>
 
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { status: 'idle' };
+  onSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    this.setState({ status: 'sending' });
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+      const json = await res.json();
+      if (json.success) { form.reset(); this.setState({ status: 'sent' }); }
+      else this.setState({ status: 'error' });
+    } catch (err) { this.setState({ status: 'error' }); }
+  };
+  renderVals() {
+    const s = this.state.status;
+    return {
+      onSubmit: this.onSubmit,
+      isSent: s === 'sent',
+      isError: s === 'error',
+      sending: s === 'sending',
+      buttonLabel: s === 'sending' ? 'Sending…' : 'Send Inquiry',
+    };
+  }
+}
+</script>
 </body>
 </html>
