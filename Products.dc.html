@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+  body { margin: 0; background: #ffffff; }
+  a { color: #1e4d2e; }
+  a:hover { color: #163a22; }
+  @media (max-width: 900px) {
+    .rahal-2col > * { min-width: 0; max-width: 100%; }
+    .rahal-2col { grid-template-columns: minmax(0,1fr) !important; gap: 24px !important; }
+    .rahal-2col > img { order: -1; height: 260px !important; }
+  }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+<div style="font-family:'Inter',Arial,sans-serif;color:#22281f;background:#ffffff;">
+
+  <dc-import name="Header" current="products" hint-size="100%,76px"></dc-import>
+
+  <div style="background:#f5f7f2;border-bottom:1px solid #e3e7dd;">
+    <div style="max-width:1200px;margin:0 auto;padding:72px 32px 56px;text-align:center;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#3f8f45;margin-bottom:14px;">PRODUCTS</div>
+      <h1 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:clamp(30px,4.5vw,44px);color:#16321f;margin:0 0 16px;">A broad, growing product line</h1>
+      <p style="font-size:17px;color:#5c6660;max-width:640px;margin:0 auto;">Conventional and organic. Aseptic and frozen. Sourced globally, backed by full documentation. We're always adding new lines — reach out if you don't see what you need.</p>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:80px 32px;display:flex;flex-direction:column;gap:64px;">
+
+    <div class="rahal-2col" style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;">
+      <img src="./assets/product-concentrates.jpg" alt="Apple juice concentrate in a glass beaker with sliced apples" style="width:100%;height:320px;object-fit:cover;object-position:center;border-radius:14px;display:block;" />
+      <div>
+        <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:26px;color:#16321f;margin:0 0 12px;">Fruit &amp; Vegetable Concentrates</h2>
+        <p style="font-size:15px;line-height:1.75;color:#5c6660;margin:0;">A wide range of fruit and vegetable juice concentrates, conventional and organic, sourced from trusted growing regions worldwide and delivered to spec for bottling, beverage, and food manufacturing.</p>
+      </div>
+    </div>
+
+    <div class="rahal-2col" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;">
+      <div>
+        <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:26px;color:#16321f;margin:0 0 12px;">Purees &amp; Puree Concentrates</h2>
+        <p style="font-size:15px;line-height:1.75;color:#5c6660;margin:0;">Aseptic and frozen purees and puree concentrates for foodservice, baby food, snacks, and beverage applications, available in conventional and organic grades.</p>
+      </div>
+      <img src="./assets/product-purees.jpg" alt="Berry puree with fresh blackberries, raspberries and blueberries" style="width:100%;height:320px;object-fit:cover;object-position:center 40%;border-radius:14px;display:block;" />
+    </div>
+
+    <div class="rahal-2col" style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;">
+      <img src="./assets/product-iqf.jpg" alt="IQF frozen green beans, blueberries, raspberries and mixed vegetables" style="width:100%;height:320px;object-fit:cover;object-position:center;border-radius:14px;display:block;" />
+      <div>
+        <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:26px;color:#16321f;margin:0 0 12px;">IQF Fruits &amp; Vegetables</h2>
+        <p style="font-size:15px;line-height:1.75;color:#5c6660;margin:0;">Individually quick-frozen fruits and vegetables that lock in flavor, color, and nutrition, ready for further processing or direct use.</p>
+      </div>
+    </div>
+
+    <div class="rahal-2col" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;">
+      <div>
+        <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:26px;color:#16321f;margin:0 0 12px;">Oils, Essences &amp; Flavors</h2>
+        <p style="font-size:15px;line-height:1.75;color:#5c6660;margin:0;">Natural oils, essences, and flavor components sourced to support beverage and food formulation, including citrus oils and fruit essences.</p>
+      </div>
+      <img src="./assets/product-oils.jpg" alt="Bottles of citrus oils and essences with fresh citrus" style="width:100%;height:320px;object-fit:cover;object-position:center;border-radius:14px;display:block;" />
+    </div>
+
+    <div class="rahal-2col" style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;">
+      <img src="./assets/product-protein.jpg" alt="Specialty protein powder spilling from a scoop" style="width:100%;height:320px;object-fit:cover;object-position:center;border-radius:14px;display:block;" />
+      <div>
+        <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:26px;color:#16321f;margin:0 0 12px;">Specialty Additives</h2>
+        <p style="font-size:15px;line-height:1.75;color:#5c6660;margin:0;">Functional protein and specialty blends for brands developing next-generation beverage and food products as well as sugar substitutes, soluble fibers and other innovative additives, sweeteners and fibers.</p>
+      </div>
+    </div>
+
+    <div class="rahal-2col" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;">
+      <div>
+        <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:26px;color:#16321f;margin:0 0 12px;">Private Label Co-Manufacturing</h2>
+        <p style="font-size:15px;line-height:1.75;color:#5c6660;margin:0;">We work with private label co-manufacturers and co-packers as sources of supply, and support customers building their own private label programs end to end.</p>
+      </div>
+      <img src="./assets/product-private-label.jpg" alt="Juice bottles with blank private labels" style="width:100%;height:320px;object-fit:cover;object-position:center;border-radius:14px;display:block;" />
+    </div>
+
+  </div>
+
+  <div style="background:#1e4d2e;">
+    <div style="max-width:900px;margin:0 auto;padding:72px 32px;text-align:center;">
+      <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:32px;color:#ffffff;margin:0 0 16px;">Don't see what you're looking for?</h2>
+      <p style="font-size:16px;color:#c3cebb;margin:0 0 28px;">Our catalog is always growing — tell us what you need and we'll source it.</p>
+      <a href="./Contact.dc.html" style="text-decoration:none;background:#ffffff;color:#1e4d2e;padding:15px 30px;border-radius:4px;font-size:15px;font-weight:700;display:inline-block;" style-hover="background:#f5f7f2;">Contact Sales</a>
+    </div>
+  </div>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>

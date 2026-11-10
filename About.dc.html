@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+  body { margin: 0; background: #ffffff; }
+  a { color: #1e4d2e; }
+  a:hover { color: #163a22; }
+  @media (max-width: 900px) {
+    .rahal-2col > * { min-width: 0; max-width: 100%; }
+    .rahal-2col { grid-template-columns: minmax(0,1fr) !important; }
+    .rahal-grid-4 { grid-template-columns: repeat(2,1fr) !important; }
+    .rahal-media { height: 320px !important; }
+  }
+  @media (max-width: 600px) {
+    .rahal-grid-4 { grid-template-columns: 1fr !important; }
+    .rahal-team { grid-template-columns: repeat(2,1fr) !important; gap: 28px 12px !important; }
+    .rahal-media { height: 260px !important; }
+  }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+<div style="font-family:'Inter',Arial,sans-serif;color:#22281f;background:#ffffff;">
+
+  <dc-import name="Header" current="about" hint-size="100%,76px"></dc-import>
+
+  <div style="background:#f5f7f2;border-bottom:1px solid #e3e7dd;">
+    <div style="max-width:1200px;margin:0 auto;padding:72px 32px 56px;text-align:center;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#3f8f45;margin-bottom:14px;">ABOUT US</div>
+      <h1 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:clamp(30px,4.5vw,44px);color:#16321f;margin:0 0 16px;">Three generations in global food trade</h1>
+      <p style="font-size:17px;color:#5c6660;max-width:640px;margin:0 auto;">From a small trading operation started in the 1960s to a global sourcing partner for hundreds of food and beverage companies.</p>
+    </div>
+  </div>
+
+  <div class="rahal-2col" style="max-width:1200px;margin:0 auto;padding:88px 32px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;">
+    <img class="rahal-media" src="./assets/story-team-trade-show.jpg" alt="Rahal International team at a trade show booth" style="width:100%;height:440px;object-fit:cover;object-position:center 35%;border-radius:14px;display:block;" />
+    <div>
+      <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:30px;color:#16321f;margin:0 0 20px;">Our story</h2>
+      <p style="font-size:16px;line-height:1.8;color:#5c6660;margin:0 0 18px;">Rahal International began in the 1960s as a small family trading business. Over three generations, it has grown organically into a trusted global supplier of fruit and vegetable juice concentrates, purees, and specialty ingredients — without losing the personal, relationship-first approach it was built on.</p>
+      <p style="font-size:16px;line-height:1.8;color:#5c6660;margin:0 0 18px;">Today we work as importers, sales agents, and distributors, sourcing from CPG companies, private label co-manufacturers, and co-packers across more than 20 countries. We manage over 5,000 truck and container shipments a year on behalf of more than 200 customers — from the largest CPG companies and bottlers to small startup food brands.</p>
+      <p style="font-size:16px;line-height:1.8;color:#5c6660;margin:0;">What hasn't changed is how we operate: hands-on, around the clock, and focused on being a supply partner our customers can build a business on.</p>
+    </div>
+  </div>
+
+  <div style="background:#f5f7f2;border-top:1px solid #e3e7dd;border-bottom:1px solid #e3e7dd;">
+    <div style="max-width:1200px;margin:0 auto;padding:80px 32px;">
+      <div style="text-align:center;max-width:600px;margin:0 auto 40px;">
+        <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#3f8f45;margin-bottom:14px;">THE TRADITION CONTINUES</div>
+        <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:32px;color:#16321f;margin:0;">Our story in pictures</h2>
+      </div>
+      <div style="max-width:760px;margin:0 auto;">
+        <div style="position:relative;border-radius:14px;overflow:hidden;background:#16321f;aspect-ratio:4/3;">
+          <sc-if value="{{ isPhoto1 }}" hint-placeholder-val="{{ true }}">
+            <img src="./assets/history-1.jpg" alt="Fruit sorting line in an early production facility" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto2 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-2.jpg" alt="Processing plant piping and machinery" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto3 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-3.jpg" alt="Family and colleagues on a lakeside boardwalk" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto4 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-4.jpg" alt="Team outside the Fahncke Import-Export building" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto5 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-5.jpg" alt="Mountain landscape" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto6 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-6.jpg" alt="A team member overlooking the mountains" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto7 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-7.jpg" alt="Plant tour among processing equipment" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto8 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-8.jpg" alt="Fruit being loaded into a processing hopper" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto9 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-9.jpg" alt="Control room and processing tanks" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto10 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-10.jpg" alt="Conveyor belt processing equipment" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto11 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-11.jpg" alt="Warehouse storage of packaged drums" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto12 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-12.jpg" alt="Workers filling a drum with product" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto13 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-13.jpg" alt="Team touring a production facility" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto14 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-14.jpg" alt="Trucks and crates at a loading yard" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto15 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-15.jpg" alt="Meeting with a supplier at a delivery yard" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto16 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-16.jpg" alt="Stainless steel storage tanks" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto17 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-17.jpg" alt="Product chute and conveyor detail" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto18 }}" hint-placeholder-val="{{ false }}">
+            <img class="rahal-media" src="./assets/history-18.jpg" alt="Two family members overlooking the mountains" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto19 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-19.jpg" alt="Industrial processing tank" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto20 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-20.jpg" alt="Team at an industry trade show" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto21 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-21.jpg" alt="Meeting with a supplier at a loading yard" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto22 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-22.jpg" alt="Inspecting grapes in a vineyard" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto23 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-23.jpg" alt="Team members visiting a vineyard" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto24 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-24.jpg" alt="Modern processing plant equipment" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto25 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-25.jpg" alt="Orchard row alongside a dirt road" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto26 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-26.jpg" alt="A ripe blackberry held in hand" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto27 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-27.jpg" alt="Reaching for apples in an orchard" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto28 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-28.jpg" alt="Picking blackberries at a farm visit" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto29 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-29.jpg" alt="Row of apple trees under blue sky" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto30 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-30.jpg" alt="Walking through a modern processing facility" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto31 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-31.jpg" alt="Stainless steel evaporator towers" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto32 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-32.jpg" alt="Fruit processing rollers in operation" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto33 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-33.jpg" alt="Forklift moving crates in a warehouse" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto34 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-34.jpg" alt="Processing plant tank room" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto37 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-37.jpg" alt="Cherries on the branch during a farm visit" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto38 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-38.jpg" alt="Holding a freshly picked blackberry" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto39 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-39.jpg" alt="Cluster of apples on the tree" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto40 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-40.jpg" alt="Close-up of cherries on the branch" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto41 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-41.jpg" alt="Citrus sorting line at a packing facility" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto42 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-42.jpg" alt="Aseptic bag-in-drum filling equipment" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto43 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-43.jpg" alt="Citrus moving down a plant conveyor" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto44 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-44.jpg" alt="Stainless steel piping in a processing plant" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto45 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-45.jpg" alt="Inspecting lined bulk bins on a processing plant floor" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto46 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-46.jpg" alt="Forklift tipping citrus into a receiving pit" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto47 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-47.jpg" alt="Citrus in a receiving pit outside an evaporation plant" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto48 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-48.jpg" alt="Rahal team in a citrus orchard" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <sc-if value="{{ isPhoto49 }}" hint-placeholder-val="{{ false }}">
+            <img src="./assets/history-49.jpg" alt="Oranges ripening on the tree" style="width:100%;height:100%;object-fit:contain;display:block;" />
+          </sc-if>
+          <button onClick="{{ prev }}" aria-label="Previous" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.9);border:none;cursor:pointer;font-size:18px;color:#16321f;display:flex;align-items:center;justify-content:center;" style-hover="background:#ffffff;">←</button>
+          <button onClick="{{ next }}" aria-label="Next" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.9);border:none;cursor:pointer;font-size:18px;color:#16321f;display:flex;align-items:center;justify-content:center;" style-hover="background:#ffffff;">→</button>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin-top:20px;max-width:100%;">
+          <sc-for list="{{ dots }}" as="d" hint-placeholder-count="2">
+            <button onClick="{{ d.onClick }}" aria-label="Go to photo" style="width:9px;height:9px;border-radius:50%;border:none;cursor:pointer;padding:0;background:{{ d.bg }};"></button>
+          </sc-for>
+          <span style="margin-left:10px;font-size:13px;color:#5c6660;">{{ counter }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#16321f;">
+    <div style="max-width:1200px;margin:0 auto;padding:80px 32px;">
+      <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:30px;color:#ffffff;margin:0 0 44px;text-align:center;">What guides us</h2>
+      <div class="rahal-grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;">
+        <div>
+          <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:20px;color:#8fd88a;margin-bottom:10px;">Reliability</div>
+          <div style="font-size:14px;color:#c3cebb;line-height:1.7;">Consistent, on-time supply our customers can plan around.</div>
+        </div>
+        <div>
+          <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:20px;color:#8fd88a;margin-bottom:10px;">Integrity</div>
+          <div style="font-size:14px;color:#c3cebb;line-height:1.7;">Straightforward dealing, honest specs, and full documentation.</div>
+        </div>
+        <div>
+          <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:20px;color:#8fd88a;margin-bottom:10px;">Partnership</div>
+          <div style="font-size:14px;color:#c3cebb;line-height:1.7;">Long-term relationships with suppliers and customers alike.</div>
+        </div>
+        <div>
+          <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:20px;color:#8fd88a;margin-bottom:10px;">Growth</div>
+          <div style="font-size:14px;color:#c3cebb;line-height:1.7;">Growing organically, the same way we have for three generations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:88px 32px;">
+    <div style="text-align:center;max-width:600px;margin:0 auto 48px;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#3f8f45;margin-bottom:14px;">OUR TEAM</div>
+      <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:32px;color:#16321f;margin:0;">Meet the team</h2>
+    </div>
+    <div class="rahal-grid-4 rahal-team" style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;">
+      <div style="text-align:center;">
+        <img src="./assets/team-paul-rahal.jpg" alt="Paul Rahal, Commercial" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Paul Rahal</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Commercial</div>
+        <a href="mailto:paul.rahal@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">paul.rahal@rahalintl.com</a>
+        <div><a href="tel:+16306241138" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-624-1138</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-jd-rahal.jpg" alt="JD Rahal, Commercial" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">JD Rahal</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Commercial</div>
+        <a href="mailto:jd.rahal@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">jd.rahal@rahalintl.com</a>
+        <div><a href="tel:+16303908610" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-390-8610</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-sebastian-simas.jpg" alt="Sebastian Simas, Commercial" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Sebastian Simas</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Commercial</div>
+        <a href="mailto:sebastian.simas@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">sebastian.simas@rahalintl.com</a>
+        <div><a href="tel:+14167792748" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-416-779-2748</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-jordan-rahal.jpg" alt="Jordan Rahal, Commercial" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Jordan Rahal</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Commercial</div>
+        <a href="mailto:jordan.rahal@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">jordan.rahal@rahalintl.com</a>
+        <div><a href="tel:+17082617859" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-708-261-7859</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-norman-rahal.jpg" alt="Norman Rahal, Commercial" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Norman Rahal</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Commercial</div>
+        <a href="mailto:norman.rahal@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">norman.rahal@rahalintl.com</a>
+        <div><a href="tel:+16303008101" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-300-8101</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-dan-etheridge.jpg" alt="Dan Etheridge, CFO" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Dan Etheridge</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">CFO</div>
+        <a href="mailto:dan.etheridge@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">dan.etheridge@rahalintl.com</a>
+        <div><a href="tel:+16302861513" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1513</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-kathy-basile.jpg" alt="Kathy Basile, Account Manager" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Kathy Basile</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Account Manager</div>
+        <a href="mailto:kathy.basile@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">kathy.basile@rahalintl.com</a>
+        <div><a href="tel:+16302861501" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1501</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-joey-capra.jpg" alt="Joey Capra, Account Manager" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Joey Capra</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Account Manager</div>
+        <a href="mailto:joey.capra@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">joey.capra@rahalintl.com</a>
+        <div><a href="tel:+16302861517" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1517</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-olivia-hernandez.jpg" alt="Olivia Hernandez, Account Manager" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Olivia Hernandez</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Account Manager</div>
+        <a href="mailto:olivia.hernandez@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">olivia.hernandez@rahalintl.com</a>
+        <div><a href="tel:+16302861518" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1518</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-barbara-obrien.jpg" alt="Barbara O'Brien, Account Manager" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Barbara O'Brien</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Account Manager</div>
+        <a href="mailto:barbara.obrien@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">barbara.obrien@rahalintl.com</a>
+        <div><a href="tel:+16302861508" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1508</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-karen-rahal.jpg" alt="Karen Rahal, Account Manager" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Karen Rahal</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Account Manager</div>
+        <a href="mailto:karen.rahal@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">karen.rahal@rahalintl.com</a>
+        <div><a href="tel:+16302861520" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1520</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-lisa-roback.jpg" alt="Lisa Roback, Account Manager" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Lisa Roback</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Account Manager</div>
+        <a href="mailto:lisa.roback@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">lisa.roback@rahalintl.com</a>
+        <div><a href="tel:+16302861503" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1503</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-sarah-shoenberger.jpg" alt="Sarah Schoenberger, Customer Service" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Sarah Schoenberger</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Customer Service</div>
+        <a href="mailto:sarah.schoenberger@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">sarah.schoenberger@rahalintl.com</a>
+        <div><a href="tel:+16308610078" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-861-0078</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-jackie-guerra.jpg" alt="Jackie Guerra, Finance" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Jackie Guerra</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Finance</div>
+        <a href="mailto:jackie.guerra@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">jackie.guerra@rahalintl.com</a>
+        <div><a href="tel:+16302861507" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1507</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-geoffrey-guillen.jpg" alt="Geoffrey Guillen, Finance" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Geoffrey Guillen</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Finance</div>
+        <a href="mailto:geoffrey.guillen@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">geoffrey.guillen@rahalintl.com</a>
+        <div><a href="tel:+16302861521" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1521</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-helene-hraha.jpg" alt="Helene Hraha, Finance" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Helene Hraha</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Finance</div>
+        <a href="mailto:helene.hraha@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">helene.hraha@rahalintl.com</a>
+        <div><a href="tel:+16302861504" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1504</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-becky-lange.jpg" alt="Becky Lange, Finance" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Becky Lange</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Finance</div>
+        <a href="mailto:becky.lange@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">becky.lange@rahalintl.com</a>
+        <div><a href="tel:+16302861514" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1514</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-carol-wurtz.jpg" alt="Carol Wurtz, Documentation and Regulatory Specialist" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Carol Wurtz</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Documentation and Regulatory Specialist</div>
+        <a href="mailto:carol.wurtz@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">carol.wurtz@rahalintl.com</a>
+        <div><a href="tel:+16302861505" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1505</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-megan-knapp.jpg" alt="Megan Knapp, International Receiving" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center 25%;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Megan Knapp</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">International Receiving</div>
+        <a href="mailto:megan.knapp@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">megan.knapp@rahalintl.com</a>
+        <div><a href="tel:+16302861522" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-286-1522</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#1e4d2e;">
+    <div style="max-width:900px;margin:0 auto;padding:72px 32px;text-align:center;">
+      <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:32px;color:#ffffff;margin:0 0 16px;">Let's talk about your supply needs</h2>
+      <a href="./Contact.dc.html" style="text-decoration:none;background:#ffffff;color:#1e4d2e;padding:15px 30px;border-radius:4px;font-size:15px;font-weight:700;display:inline-block;" style-hover="background:#f5f7f2;">Contact Sales</a>
+    </div>
+  </div>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { historyIndex: 0 };
+  renderVals() {
+    const images = [32,16,29,20,48,17,45,23,21,22,18,41,15,30,33,3,31,2,42,14,38,49,12,24,8,26,7,27,10,28,11,39,5,40,46,9,13,37,4,44,34,6,25,19,43,1,47];
+    const idx = this.state.historyIndex;
+    const dots = images.map((img, i) => ({
+      onClick: () => this.setState({ historyIndex: i }),
+      bg: i === idx ? '#1e4d2e' : '#cbd6c4',
+    }));
+    return {
+      isPhoto1: images[idx] === 1,
+      isPhoto2: images[idx] === 2,
+      isPhoto3: images[idx] === 3,
+      isPhoto4: images[idx] === 4,
+      isPhoto5: images[idx] === 5,
+      isPhoto6: images[idx] === 6,
+      isPhoto7: images[idx] === 7,
+      isPhoto8: images[idx] === 8,
+      isPhoto9: images[idx] === 9,
+      isPhoto10: images[idx] === 10,
+      isPhoto11: images[idx] === 11,
+      isPhoto12: images[idx] === 12,
+      isPhoto13: images[idx] === 13,
+      isPhoto14: images[idx] === 14,
+      isPhoto15: images[idx] === 15,
+      isPhoto16: images[idx] === 16,
+      isPhoto17: images[idx] === 17,
+      isPhoto18: images[idx] === 18,
+      isPhoto19: images[idx] === 19,
+      isPhoto20: images[idx] === 20,
+      isPhoto21: images[idx] === 21,
+      isPhoto22: images[idx] === 22,
+      isPhoto23: images[idx] === 23,
+      isPhoto24: images[idx] === 24,
+      isPhoto25: images[idx] === 25,
+      isPhoto26: images[idx] === 26,
+      isPhoto27: images[idx] === 27,
+      isPhoto28: images[idx] === 28,
+      isPhoto29: images[idx] === 29,
+      isPhoto30: images[idx] === 30,
+      isPhoto31: images[idx] === 31,
+      isPhoto32: images[idx] === 32,
+      isPhoto33: images[idx] === 33,
+      isPhoto34: images[idx] === 34,
+      isPhoto37: images[idx] === 37,
+      isPhoto38: images[idx] === 38,
+      isPhoto39: images[idx] === 39,
+      isPhoto40: images[idx] === 40,
+      isPhoto41: images[idx] === 41,
+      isPhoto42: images[idx] === 42,
+      isPhoto43: images[idx] === 43,
+      isPhoto44: images[idx] === 44,
+      isPhoto45: images[idx] === 45,
+      isPhoto46: images[idx] === 46,
+      isPhoto47: images[idx] === 47,
+      isPhoto48: images[idx] === 48,
+      isPhoto49: images[idx] === 49,
+      dots,
+      counter: (idx + 1) + ' / ' + images.length,
+      prev: () => this.setState(s => ({ historyIndex: (s.historyIndex - 1 + images.length) % images.length })),
+      next: () => this.setState(s => ({ historyIndex: (s.historyIndex + 1) % images.length })),
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  @media (max-width: 900px) { .rahal-footer { grid-template-columns: 1fr 1fr !important; } .rahal-footer > div:first-child { grid-column: 1 / -1; } }
+  @media (max-width: 600px) { .rahal-footer { grid-template-columns: 1fr !important; gap: 32px !important; } }
+</style>
+</helmet>
+
+<div style="background:#16321f;font-family:'Inter',Arial,sans-serif;color:#d8ded3;">
+  <div class="rahal-footer" style="max-width:1200px;margin:0 auto;padding:56px 32px 32px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+        <img src="./assets/logo.png" alt="Rahal International" style="height:48px;width:auto;background:#ffffff;border-radius:8px;padding:4px 8px;" />
+        <span style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:17px;letter-spacing:0.3px;color:#ffffff;">RAHAL INTERNATIONAL</span>
+      </div>
+      <p style="font-size:14px;line-height:1.7;color:#aab6a1;max-width:340px;margin:0;">Importers, sales agents, and distributors of fruit and vegetable juice concentrates and purees, serving CPG companies, bottlers, and co-packers worldwide since the 1960s.</p>
+    </div>
+    <div>
+      <div style="font-size:13px;font-weight:700;letter-spacing:1px;color:#ffffff;margin-bottom:16px;">COMPANY</div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <a href="./Home.dc.html" style="text-decoration:none;color:#aab6a1;font-size:14px;" style-hover="color:#ffffff;">Home</a>
+        <a href="./About.dc.html" style="text-decoration:none;color:#aab6a1;font-size:14px;" style-hover="color:#ffffff;">About Us</a>
+        <a href="./Products.dc.html" style="text-decoration:none;color:#aab6a1;font-size:14px;" style-hover="color:#ffffff;">Products</a>
+        <a href="./Contact.dc.html" style="text-decoration:none;color:#aab6a1;font-size:14px;" style-hover="color:#ffffff;">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:13px;font-weight:700;letter-spacing:1px;color:#ffffff;margin-bottom:16px;">GET IN TOUCH</div>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;color:#aab6a1;">
+        <a href="mailto:sales@rahalintl.com" style="text-decoration:none;color:#aab6a1;" style-hover="color:#ffffff;">sales@rahalintl.com</a>
+        <span>Sourcing from 20+ countries</span>
+        <span>Serving 200+ customers worldwide</span>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:20px 32px 28px;border-top:1px solid #2a4a34;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <span style="font-size:13px;color:#7f8f77;">© 2026 Rahal International. All rights reserved.</span>
+    <span style="font-size:13px;color:#7f8f77;">Family-owned since the 1960s — Three generations in global juice &amp; puree trade.</span>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

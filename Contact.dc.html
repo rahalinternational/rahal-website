@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+  body { margin: 0; background: #ffffff; }
+  a { color: #1e4d2e; }
+  a:hover { color: #163a22; }
+  input, textarea { font-family: 'Inter', Arial, sans-serif; }
+  @media (max-width: 900px) {
+    .rahal-2col > * { min-width: 0; max-width: 100%; }
+    .rahal-2col { grid-template-columns: minmax(0,1fr) !important; }
+  }
+  @media (max-width: 600px) {
+    .rahal-form { padding: 24px !important; }
+    .rahal-form-2 { grid-template-columns: 1fr !important; }
+  }
+</style>
+</helmet>
+<div style="font-family:'Inter',Arial,sans-serif;color:#22281f;background:#ffffff;">
+
+  <dc-import name="Header" current="contact" hint-size="100%,76px"></dc-import>
+
+  <div style="background:#f5f7f2;border-bottom:1px solid #e3e7dd;">
+    <div style="max-width:1200px;margin:0 auto;padding:72px 32px 56px;text-align:center;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#3f8f45;margin-bottom:14px;">CONTACT</div>
+      <h1 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:clamp(30px,4.5vw,44px);color:#16321f;margin:0 0 16px;">Let's talk sourcing</h1>
+      <p style="font-size:17px;color:#5c6660;max-width:600px;margin:0 auto;">Whether you're a large CPG company or a startup brand, our team responds directly — no runaround.</p>
+    </div>
+  </div>
+
+  <div class="rahal-2col" style="max-width:1200px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;">
+    <div style="display:flex;flex-direction:column;gap:28px;">
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:1px;color:#3f8f45;margin-bottom:8px;">EMAIL</div>
+        <a href="mailto:sales@rahalintl.com" style="text-decoration:none;font-size:19px;font-weight:700;color:#16321f;">sales@rahalintl.com</a>
+      </div>
+      <div style="height:1px;background:#e3e7dd;"></div>
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:1px;color:#3f8f45;margin-bottom:8px;">WHO WE WORK WITH</div>
+        <p style="font-size:15px;line-height:1.7;color:#5c6660;margin:0;">CPG companies, bottling companies, food companies, co-manufacturers, co-packers, and startup food brands.</p>
+      </div>
+      <div style="height:1px;background:#e3e7dd;"></div>
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:1px;color:#3f8f45;margin-bottom:8px;">RESPONSE TIME</div>
+        <p style="font-size:15px;line-height:1.7;color:#5c6660;margin:0;">Our team provides hands-on, around-the-clock customer service — expect a direct reply, fast.</p>
+      </div>
+      <div style="height:1px;background:#e3e7dd;"></div>
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:1px;color:#3f8f45;margin-bottom:12px;">FOLLOW US</div>
+        <div style="display:flex;gap:12px;">
+          <a href="https://www.linkedin.com/company/rahal-international/home/" target="_blank" rel="noopener" aria-label="Rahal International on LinkedIn" title="Rahal International on LinkedIn" style="width:44px;height:44px;border-radius:50%;background:#1e4d2e;color:#ffffff;display:flex;align-items:center;justify-content:center;text-decoration:none;" style-hover="background:#163a22;color:#ffffff;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg></a>
+          <a href="https://www.instagram.com/rahalintl?mdxt=MXFub2o3MWRxMm53Yg==" target="_blank" rel="noopener" aria-label="Rahal International on Instagram" title="Rahal International on Instagram" style="width:44px;height:44px;border-radius:50%;background:#1e4d2e;color:#ffffff;display:flex;align-items:center;justify-content:center;text-decoration:none;" style-hover="background:#163a22;color:#ffffff;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <form action="mailto:sales@rahalintl.com" method="post" enctype="text/plain" class="rahal-form" style="background:#f5f7f2;border:1px solid #e3e7dd;border-radius:12px;padding:40px;display:flex;flex-direction:column;gap:18px;">
+      <div class="rahal-form-2" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;flex-wrap:wrap;">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:13px;font-weight:600;color:#16321f;">Name</label>
+          <input type="text" name="name" style="padding:12px 14px;border:1px solid #cfd8c8;border-radius:6px;font-size:15px;background:#ffffff;" />
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:13px;font-weight:600;color:#16321f;">Company</label>
+          <input type="text" name="company" style="padding:12px 14px;border:1px solid #cfd8c8;border-radius:6px;font-size:15px;background:#ffffff;" />
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <label style="font-size:13px;font-weight:600;color:#16321f;">Email</label>
+        <input type="email" name="email" style="padding:12px 14px;border:1px solid #cfd8c8;border-radius:6px;font-size:15px;background:#ffffff;" />
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <label style="font-size:13px;font-weight:600;color:#16321f;">What are you looking to source?</label>
+        <textarea name="message" rows="5" style="padding:12px 14px;border:1px solid #cfd8c8;border-radius:6px;font-size:15px;resize:vertical;background:#ffffff;"></textarea>
+      </div>
+      <button type="submit" style="background:#1e4d2e;color:#ffffff;border:none;padding:15px 24px;border-radius:6px;font-size:15px;font-weight:700;cursor:pointer;" style-hover="background:#163a22;">Send Inquiry</button>
+    </form>
+  </div>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+  body { margin: 0; background: #ffffff; }
+  a { color: #1e4d2e; }
+  a:hover { color: #163a22; }
+  @media (max-width: 900px) {
+    .rahal-2col > * { min-width: 0; max-width: 100%; }
+    .rahal-2col { grid-template-columns: minmax(0,1fr) !important; }
+    .rahal-grid-4 { grid-template-columns: repeat(2,1fr) !important; }
+    .rahal-grid-3 { grid-template-columns: 1fr !important; }
+    .rahal-grid-5 { grid-template-columns: repeat(2,1fr) !important; }
+    .rahal-media { height: 300px !important; }
+    .rahal-map { height: auto !important; }
+  }
+  @media (max-width: 600px) {
+    .rahal-grid-4 { grid-template-columns: 1fr !important; }
+    .rahal-grid-5 { grid-template-columns: 1fr !important; }
+    .rahal-team { grid-template-columns: repeat(2,1fr) !important; gap: 28px 12px !important; }
+    .rahal-media { height: 240px !important; }
+  }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+<div style="font-family:'Inter',Arial,sans-serif;color:#22281f;background:#ffffff;">
+
+  <dc-import name="Header" current="home" hint-size="100%,76px"></dc-import>
+
+  <!-- HERO -->
+  <div class="rahal-2col" style="max-width:1200px;margin:0 auto;padding:72px 32px 48px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;">
+    <div>
+      <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#3f8f45;margin-bottom:18px;">GLOBAL FRUIT &amp; VEGETABLE INGREDIENT SUPPLY</div>
+      <h1 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:clamp(32px,4.5vw,52px);line-height:1.1;letter-spacing:-0.5px;color:#16321f;margin:0 0 22px;">Sourcing the world's juice concentrates and purees, delivered reliably.</h1>
+      <p style="font-size:17px;line-height:1.7;color:#5c6660;margin:0 0 32px;max-width:520px;">Rahal International connects CPG companies, bottlers, co-manufacturers, and food producers with a trusted global supply network — backed by three generations of family experience.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="./Contact.dc.html" style="text-decoration:none;background:#1e4d2e;color:#ffffff;padding:15px 28px;border-radius:4px;font-size:15px;font-weight:600;" style-hover="background:#163a22;">Contact Sales</a>
+        <a href="./Products.dc.html" style="text-decoration:none;background:#ffffff;color:#1e4d2e;padding:15px 28px;border-radius:4px;font-size:15px;font-weight:600;border:1.5px solid #1e4d2e;" style-hover="background:#f5f7f2;">View Products</a>
+      </div>
+    </div>
+    <img class="rahal-media" src="./assets/hero-port.jpg" alt="Container ships loaded with cargo at a port" style="width:100%;height:420px;object-fit:cover;object-position:center;border-radius:14px;display:block;" />
+  </div>
+
+  <!-- STATS -->
+  <div style="background:#f5f7f2;border-top:1px solid #e3e7dd;border-bottom:1px solid #e3e7dd;">
+    <div class="rahal-grid-4" style="max-width:1200px;margin:0 auto;padding:40px 32px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;">
+      <div>
+        <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:38px;color:#1e4d2e;">1960s</div>
+        <div style="font-size:14px;color:#5c6660;margin-top:6px;">In business since</div>
+      </div>
+      <div>
+        <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:38px;color:#1e4d2e;">5,000+</div>
+        <div style="font-size:14px;color:#5c6660;margin-top:6px;">Truck &amp; container shipments / year</div>
+      </div>
+      <div>
+        <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:38px;color:#1e4d2e;">20+</div>
+        <div style="font-size:14px;color:#5c6660;margin-top:6px;">Countries sourced from</div>
+      </div>
+      <div>
+        <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:38px;color:#1e4d2e;">200+</div>
+        <div style="font-size:14px;color:#5c6660;margin-top:6px;">Customers served worldwide</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY -->
+  <div class="rahal-2col" style="max-width:1200px;margin:0 auto;padding:88px 32px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;">
+    <div class="rahal-map" style="width:100%;height:440px;background:#f5f7f2;border-radius:14px;box-sizing:border-box;padding:32px 24px;display:flex;flex-direction:column;justify-content:center;gap:24px;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3f8f45;text-align:center;">a truly global sourcing network</div>
+      <img src="./assets/sourcing-map-v2.jpg" alt="World map highlighting Rahal International's sourcing countries" style="width:100%;height:auto;max-height:340px;object-fit:contain;display:block;mix-blend-mode:multiply;" />
+    </div>
+    <div>
+      <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:34px;color:#16321f;margin:0 0 20px;">Why partner with Rahal International?</h2>
+      <div style="display:flex;flex-direction:column;gap:22px;">
+        <div style="display:flex;gap:16px;">
+          <div style="width:6px;background:#3f8f45;border-radius:3px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:4px;">Deep global sourcing network</div>
+            <div style="font-size:15px;color:#5c6660;line-height:1.6;">Offices and partnerships spanning five continents, giving us reach and flexibility other suppliers can't match.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;">
+          <div style="width:6px;background:#3f8f45;border-radius:3px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:4px;">Supplier financing programs</div>
+            <div style="font-size:15px;color:#5c6660;line-height:1.6;">Established financing arrangements with key suppliers that keep supply moving even when markets tighten.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;">
+          <div style="width:6px;background:#3f8f45;border-radius:3px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:4px;">Rigorous certification &amp; documentation</div>
+            <div style="font-size:15px;color:#5c6660;line-height:1.6;">A sophisticated compliance program built to meet today's most stringent food-safety and regulatory requirements.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;">
+          <div style="width:6px;background:#3f8f45;border-radius:3px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:4px;">Round-the-clock customer service</div>
+            <div style="font-size:15px;color:#5c6660;line-height:1.6;">Hands-on logistics support and contract management from first inquiry to final delivery.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEGACY BAND -->
+  <div style="background:#16321f;">
+    <div class="rahal-2col" style="max-width:1200px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;">
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#8fd88a;margin-bottom:16px;">OUR STORY</div>
+        <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:32px;color:#ffffff;margin:0 0 18px;">A third-generation family business, built since the 1960s.</h2>
+        <p style="font-size:16px;line-height:1.75;color:#c3cebb;margin:0 0 24px;max-width:520px;">What started as a small trading operation has grown organically, generation after generation, into a global sourcing partner trusted by hundreds of food and beverage companies — without ever losing the personal, hands-on approach we started with.</p>
+        <a href="./About.dc.html" style="text-decoration:none;color:#ffffff;font-weight:600;font-size:15px;border-bottom:2px solid #5cb350;padding-bottom:2px;">Read our full story →</a>
+      </div>
+      <img class="rahal-media" src="./assets/history-18.jpg" alt="Two Rahal family members at a mountain overlook in the 1970s" style="width:100%;height:380px;object-fit:cover;object-position:center 40%;border-radius:14px;display:block;" />
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div style="max-width:1200px;margin:0 auto;padding:88px 32px;">
+    <div style="text-align:center;max-width:640px;margin:0 auto 48px;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#3f8f45;margin-bottom:14px;">WHAT WE SUPPLY</div>
+      <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:34px;color:#16321f;margin:0 0 14px;">A broad, growing product line</h2>
+      <p style="font-size:16px;color:#5c6660;margin:0;">From concentrates to specialty blends — conventional and organic, aseptic and frozen.</p>
+    </div>
+    <div class="rahal-grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+      <div style="border:1px solid #e3e7dd;border-radius:10px;padding:26px 22px;background:#fbfcfa;">
+        <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:8px;">Fruit &amp; Vegetable Concentrates</div>
+        <div style="font-size:14px;color:#5c6660;line-height:1.6;">Conventional and organic, single-strength to high Brix.</div>
+      </div>
+      <div style="border:1px solid #e3e7dd;border-radius:10px;padding:26px 22px;background:#fbfcfa;">
+        <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:8px;">Purees &amp; Puree Concentrates</div>
+        <div style="font-size:14px;color:#5c6660;line-height:1.6;">Aseptic and frozen, packed for foodservice and manufacturing.</div>
+      </div>
+      <div style="border:1px solid #e3e7dd;border-radius:10px;padding:26px 22px;background:#fbfcfa;">
+        <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:8px;">IQF Fruits &amp; Vegetables</div>
+        <div style="font-size:14px;color:#5c6660;line-height:1.6;">Individually quick-frozen, retaining flavor, color and nutrition.</div>
+      </div>
+      <div style="border:1px solid #e3e7dd;border-radius:10px;padding:26px 22px;background:#fbfcfa;">
+        <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:8px;">Oils, Essences &amp; Flavors</div>
+        <div style="font-size:14px;color:#5c6660;line-height:1.6;">Natural extracts and flavor components for beverage formulation.</div>
+      </div>
+      <div style="border:1px solid #e3e7dd;border-radius:10px;padding:26px 22px;background:#fbfcfa;">
+        <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:8px;">Specialty Protein Blends</div>
+        <div style="font-size:14px;color:#5c6660;line-height:1.6;">Functional and specialty formulations for emerging product lines.</div>
+      </div>
+      <div style="border:1px solid #e3e7dd;border-radius:10px;padding:26px 22px;background:#fbfcfa;">
+        <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:8px;">Private Label Co-Manufacturing</div>
+        <div style="font-size:14px;color:#5c6660;line-height:1.6;">End-to-end co-packing and private label production support.</div>
+      </div>
+      <div style="border:1px solid #e3e7dd;border-radius:10px;padding:26px 22px;background:#fbfcfa;">
+        <div style="font-weight:700;font-size:16px;color:#16321f;margin-bottom:8px;">Conventional &amp; Organic</div>
+        <div style="font-size:14px;color:#5c6660;line-height:1.6;">Certified organic and conventional lines across our full catalog.</div>
+      </div>
+      <div style="border:1.5px dashed #cbd6c4;border-radius:10px;padding:26px 22px;background:#ffffff;display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-weight:700;font-size:16px;color:#3f8f45;margin-bottom:6px;">And growing</div>
+        <a href="./Products.dc.html" style="font-size:14px;color:#1e4d2e;font-weight:600;text-decoration:none;">See the full product line →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PILLARS -->
+  <div style="background:#f5f7f2;border-top:1px solid #e3e7dd;border-bottom:1px solid #e3e7dd;">
+    <div style="max-width:1200px;margin:0 auto;padding:80px 32px;">
+      <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:30px;color:#16321f;margin:0 0 44px;text-align:center;">Supply you can build a business on</h2>
+      <div class="rahal-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+        <div>
+          <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:22px;color:#1e4d2e;margin-bottom:12px;">Certification &amp; Compliance</div>
+          <div style="font-size:15px;color:#5c6660;line-height:1.7;">A sophisticated documentation program that keeps every shipment in line with the industry's most stringent requirements.</div>
+        </div>
+        <div>
+          <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:22px;color:#1e4d2e;margin-bottom:12px;">Vendor-Managed Inventory</div>
+          <div style="font-size:15px;color:#5c6660;line-height:1.7;">Inventory held at key ports and regions through decades-long partnerships with top-tier warehouse networks.</div>
+        </div>
+        <div>
+          <div style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:22px;color:#1e4d2e;margin-bottom:12px;">End-to-End Logistics</div>
+          <div style="font-size:15px;color:#5c6660;line-height:1.7;">Around-the-clock support covering contract management, freight, and delivery from origin to your dock.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEAM TEASER -->
+  <div style="max-width:1200px;margin:0 auto;padding:88px 32px 88px;">
+    <div style="text-align:center;max-width:600px;margin:0 auto 48px;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#3f8f45;margin-bottom:14px;">OUR COMMERCIAL TEAM</div>
+      <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:32px;color:#16321f;margin:0;">Your Partners behind every shipment</h2>
+    </div>
+    <div class="rahal-grid-5 rahal-team" style="display:grid;grid-template-columns:repeat(5,1fr);gap:24px;">
+      <div style="text-align:center;">
+        <img src="./assets/team-paul-rahal.jpg" alt="Paul Rahal, Commercial" style="width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Paul Rahal</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Commercial</div>
+        <a href="mailto:paul.rahal@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">paul.rahal@rahalintl.com</a>
+        <div><a href="tel:+16306241138" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-624-1138</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-jd-rahal.jpg" alt="JD Rahal, Commercial" style="width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">JD Rahal</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Commercial</div>
+        <a href="mailto:jd.rahal@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">jd.rahal@rahalintl.com</a>
+        <div><a href="tel:+16303908610" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-390-8610</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-sebastian-simas.jpg" alt="Sebastian Simas, Commercial" style="width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Sebastian Simas</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Commercial</div>
+        <a href="mailto:sebastian.simas@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">sebastian.simas@rahalintl.com</a>
+        <div><a href="tel:+14167792748" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-416-779-2748</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-jordan-rahal.jpg" alt="Jordan Rahal, Commercial" style="width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Jordan Rahal</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Commercial</div>
+        <a href="mailto:jordan.rahal@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">jordan.rahal@rahalintl.com</a>
+        <div><a href="tel:+17082617859" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-708-261-7859</a></div>
+      </div>
+      <div style="text-align:center;">
+        <img src="./assets/team-norman-rahal.jpg" alt="Norman Rahal, Commercial" style="width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:center;display:block;margin:0 auto 16px;" />
+        <div style="font-weight:700;font-size:15px;color:#16321f;">Norman Rahal</div>
+        <div style="font-size:13px;color:#5c6660;margin-top:2px;">Commercial</div>
+        <a href="mailto:norman.rahal@rahalintl.com" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;margin-top:6px;padding:6px 0;word-break:break-all;" style-hover="text-decoration:underline;color:#163a22;">norman.rahal@rahalintl.com</a>
+        <div><a href="tel:+16303008101" style="display:inline-block;font-size:13px;color:#1e4d2e;text-decoration:none;padding:4px 0;" style-hover="text-decoration:underline;color:#163a22;">+1-630-300-8101</a></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="./About.dc.html" style="text-decoration:none;color:#1e4d2e;font-weight:600;font-size:15px;">Meet the full team →</a>
+    </div>
+  </div>
+
+  <!-- CTA BANNER -->
+  <div style="background:#1e4d2e;">
+    <div style="max-width:900px;margin:0 auto;padding:72px 32px;text-align:center;">
+      <h2 style="font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:32px;color:#ffffff;margin:0 0 16px;">Ready to talk sourcing?</h2>
+      <p style="font-size:16px;color:#c3cebb;margin:0 0 32px;">Tell us what you need — our team will get back to you directly.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="./Contact.dc.html" style="text-decoration:none;background:#ffffff;color:#1e4d2e;padding:15px 30px;border-radius:4px;font-size:15px;font-weight:700;" style-hover="background:#f5f7f2;">Contact Sales</a>
+        <a href="mailto:sales@rahalintl.com" style="text-decoration:none;color:#ffffff;padding:15px 30px;border-radius:4px;font-size:15px;font-weight:600;border:1.5px solid #4a7358;">sales@rahalintl.com</a>
+      </div>
+    </div>
+  </div>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>
